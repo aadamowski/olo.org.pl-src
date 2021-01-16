@@ -13,9 +13,24 @@ export default function LinksPage(props) {
             href="https://www.linkedin.com/in/aleksanderadamowski/"
             text="LinkedIn"
           />
+
+          <ExtLink href="https://github.com/aadamowski" text="GitHub" />
+        </p>
+
+        <p>
+          <ExtLink href="https://www.facebook.com/olo" text="Facebook" />
+          <ExtLink href="https://twitter.com/the_olo" text="Twitter" />
         </p>
         <p>
-          <ExtLink href="https://github.com/aadamowski" text="GitHub" />
+          <ExtLink href="https://instagram.com/aadamowski" text="Instagram" />
+          <ExtLink href="https://pinterest.com/aadamowski/" text="Pinterest" />
+          <ExtLink
+            href="https://www.flickr.com/photos/aleksanderadamowski/"
+            text="Flickr"
+          />
+        </p>
+        <p>
+          <ExtLink href="mailto:aleksander.adamowski@gmail.com" text="E-mail" />
         </p>
       </div>
     </BlogLayout>
