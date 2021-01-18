@@ -1,0 +1,21 @@
+# Random Linux performance analysis and tuning notes
+
+Time the syscalls:
+
+```
+strace -c
+```
+
+Sizes and utilization of kernel caches, to see which might need raising limits:
+
+```
+slabtop -o -s -c
+```
+
+*Steal in `atop` is bad*
+
+Major page fault counters per process:
+
+```
+ps -e -o maj_flt,comm | sort -n | tail
+```

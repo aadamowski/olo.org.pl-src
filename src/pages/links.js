@@ -32,6 +32,10 @@ export default function LinksPage(props) {
         <p>
           <ExtLink href="mailto:aleksander.adamowski@gmail.com" text="E-mail" />
         </p>
+        <hr/>
+        <Styled.h2>Open source contributions</Styled.h2>
+
+
       </div>
     </BlogLayout>
   )
