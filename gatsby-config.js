@@ -38,6 +38,8 @@ module.exports = {
       },
     },
   ],
+  // For plain https://aadamowski.github.io/olo.org.pl/ :
+  // pathPrefix: `/olo.org.pl`,
   siteMetadata: {
     title: `Aleksander Adamowski`,
     description: `Aleksander Adamowski. Professional electronic brain surgeon.`,
