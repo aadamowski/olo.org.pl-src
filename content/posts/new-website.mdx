@@ -1,0 +1,46 @@
+---
+title: New website
+date: 2021-01-18
+---
+
+import Navlink from "gatsby-theme-blog/src/components/navlink"
+
+So, after a few years of my website being down because of my free
+[OpenShift](https://www.openshift.com) container expiring, I finally
+got to getting it back up.
+
+I took this opportunity to rethink my approach and try something different.
+
+The main maintenance problem with two of my previous website incarnations was
+that they were based on a database-backed CMS
+([KeystoneJS](https://www.keystonejs.com) + [MongoDB](https://www.mongodb.com);
+previously [Drupal](https://www.drupal.org) + [MySQL](https://www.mysql.com))
+and their dependency on a separate data store proved to greatly limit my hosting
+and stack choices.
+
+After some reflection, I concluded that I wasn't really taking advantage of any
+features that necessitate a data store - neither comments under posts, nor user
+forums, nor user registration.
+
+For all practical purposes, I'd be better served by plain old static content.
+
+But I am a lazy person, and I don't want to hand craft too much HTML and CSS,
+and I don't want to manually copy common navigation elements between static HTML pages.
+
+Having some dynamic fireworks available wouldn't hurt as well.
+
+It turns out that there are frameworks that serve my use case well, and the most popular
+at the moment seems to be [Gatsby.js](https://www.gatsbyjs.com), based on
+[React](https://reactjs.org).
+
+Gatsby works pretty well as a
+[static site generator](https://www.gatsbyjs.com/docs/glossary/static-site-generator/)
+and can support dynamic React content through the process known as
+[rehydration](https://www.gatsbyjs.com/docs/conceptual/react-hydration/).
+
+I could use this to support things like e.g. dynamically calculation years
+elapsed since the last job change on my <Navlink to="/resume" text="resume"/> (which,
+BTW, is a topic for another blog post).
+
+Anyway, if you can read this, the new tech seems to be working well and hopefully
+I'll be reporting more about it in later blog posts!
