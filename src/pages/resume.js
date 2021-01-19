@@ -114,13 +114,13 @@ export default function ResumePage(props) {
             failover scheme for the company's main directory)
           </li>
           <li>
-            Network backup - IBM Tivoli Storage Manager, multi-terabyte
+            Network backup - IBM Tivoli Storage Manager, a multi-terabyte
             installation that includes a SAN array and a fully automated
             dual-drive 20 TB tape library
           </li>
           <li>
             Internet mail and groupware (Courier mail system and eGroupWare +
-            own customisations)
+            own customizations)
           </li>
           <li> Automation of administrative processes and workflow</li>
           <li>
@@ -131,7 +131,7 @@ export default function ResumePage(props) {
         <Period>Oct 1999 - Sep 2003 (4 years)</Period>
         <Position>Trainer and Consultant</Position>
         <p>
-          Trainer in the area of office applications, VBA programming and web
+          Trainer in the area of office applications, VBA programming, and web
           development.
         </p>
 
