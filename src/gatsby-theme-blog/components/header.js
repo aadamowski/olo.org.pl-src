@@ -8,7 +8,7 @@ export default props => (
     <Styled.div
       css={css({
         ml: 1,
-        mr: `auto`,
+        mr: 1,
       })}
     >
       <Navlink to="/" text="About" />
