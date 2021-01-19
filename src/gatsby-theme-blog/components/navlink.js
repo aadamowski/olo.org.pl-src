@@ -7,8 +7,6 @@ export default ({ to, text}) => (
       as={Link}
       to={to}
       css={css({
-        ml: `0.3em`,
-        mr: `auto`,
         fontFamily: `heading`,
         fontWeight: `bold`,
         textDecoration: `none`,
