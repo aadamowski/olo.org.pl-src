@@ -18,25 +18,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-theme-ui`,
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-table-of-contents`,
-            options: {
-              exclude: "Table of Contents",
-              tight: true,
-              ordered: false,
-              fromHeading: 1,
-              toHeading: 6,
-              className: "table-of-contents"
-            },
-          },
-          `gatsby-remark-autolink-headers`
-        ],
-      },
-    },
   ],
   // For plain https://aadamowski.github.io/olo.org.pl/ :
   // pathPrefix: `/olo.org.pl`,
