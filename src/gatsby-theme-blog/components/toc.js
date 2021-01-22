@@ -11,10 +11,10 @@ const TocContainer = ({ ...props }) => (
         textDecoration: `underline`,
       },
       position: `fixed`,
-      left: `calc(75%)`,
+      left: `calc(67%)`,
       top: `calc(15%)`,
       maxHeight: `70vh`,
-      maxWidth: `20vw`,
+      maxWidth: `30em`,
       display: `flex`,
     })}
   >
