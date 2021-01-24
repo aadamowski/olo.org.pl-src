@@ -1,0 +1,61 @@
+---
+title: Dynamic rehydrated components in GatsbyJS
+date: 2021-01-23
+---
+import Navlink from "src/components/navlink"
+import YearsSince from "src/components/yearssince"
+
+As I mentioned in the <Navlink to="/blog/new-website" text="previous blog post"/>,
+this website is based on the GatsbyJS static website generation framework.
+
+Itself based on [React](https://reactjs.org), it gave me the opportunity to look at
+the technology built and promoted by my employer (Facebook) in a new light.
+
+It's one thing to occasionally work on the presentation layer of internal Facebook
+services, spending most of that time modifying parts of larger systems already built
+by hundreds of other fellow engineers, and completely another thing to build a new
+user interface that's a complete, self-contained website, from scratch.
+
+I learned to appreciate the ability to semantically define certain elements
+to express page structure in more meaningful terms than raw HTML elements like `H1`, `P`,
+`DIV` or `SPAN`. This gives me some strong [semantic web](https://www.w3.org/standards/semanticweb/)
+vibes (for those who still remember that concept) - but with just the really useful parts
+(semantic model of the document for my own internal consumption and understanding) without
+the parts that made the concept unworkable (the complexity of cross-system integration).
+
+One of the cool things that are possible thanks to basing my website on GatsbyJS is
+the ability to support dynamic [React](https://reactjs.org) content thanks to
+[hydration](https://www.gatsbyjs.com/docs/conceptual/react-hydration/).
+
+One place where I take advantage of that is my <Navlink to="/resume" text="resume"/> page:
+the latest listed position I held has a dynamically calculated duration, expressed in years.
+
+Currently, it shows that I have worked as a Production Engineer at Facebook
+for <YearsSince startDate="2016-03-01T09:00:00-07:00" /> years, but on the next
+March 1st at 9:00 Pacific Time it will automatically flip
+to <YearsSince startDate="2015-03-01T09:00:00-07:00" /> years - without you
+having to reload the web page. If you have the patience, feel free to verify that
+by visiting my page on the relevant date!
+
+This is a small, barely noticeable gimmick, but it was fun to implement
+and has been a nice learning experience.
+
+The implementation is pretty straightforward: first, I created a React component that
+I named [`yearssince`](https://github.com/aadamowski/olo.org.pl-src/blob/main/src/components/yearssince.js).
+
+It tracks its internal state in two regular JavaScript `Date` objects - the start date and the current date timestamp.
+
+Then it sets up a timer with an interval of one second that changes the
+internal state by replacing the current date with a fresh one.
+
+At rendering phase, it uses the `moment` JS library (a base dependency of Gatsby)
+to calculate a timezone and Gregorian calendar-conscious difference in years
+between the start date and the present.
+
+When [embedded](https://github.com/aadamowski/olo.org.pl-src/blob/a7555fa60338ee861cc802e08da87869bc99bb68/src/pages/resume.js#L75)
+in a page, Gatsby automatically hydrates this component - so even when all of the content
+of the website gets pre-rendered on build time, the particular elements generated
+by this component will keep getting updated by React DOM server automatically
+within the web browser.
+
+The result is a counter of elapsed years that is always right.

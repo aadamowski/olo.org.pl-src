@@ -72,7 +72,7 @@ export default function ResumePage(props) {
         </Company>
 
         <Period>
-          March 2016 - Now (<YearsSince startDate="2014-10-20T09:00:00-07:00" />{" "}
+          March 2016 - Now (<YearsSince startDate="2016-03-01T09:00:00-07:00" />{" "}
           years)
         </Period>
         <Position>
