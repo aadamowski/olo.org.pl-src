@@ -4,20 +4,68 @@ import ExtLink from "gatsby-theme-blog/src/components/extlink"
 import YearsSince from "gatsby-theme-blog/src/components/yearssince"
 import { css, Styled } from "theme-ui"
 
+const Section = props => (
+  <Styled.h1
+    {...props}
+    css={css({
+      borderTop: `double gray`,
+      paddingTop: `0.5em`,
+      marginTop: `1em`,
+    })}
+  />
+)
+
 const Company = props => (
   <Styled.h2
     {...props}
-    css={css({ borderTop: `thin solid gray`, paddingTop: `0.5em` })}
+    css={css({
+      borderTop: `thin solid gray`,
+      paddingTop: `0.5em`,
+      marginBottom: `0.7em`,
+      fontWeight: `700`,
+    })}
   />
 )
-const Position = props => <Styled.h3 {...props} />
-const Period = props => <Styled.h4 {...props} />
+const School = Company
+
+const Period = props => (
+  <Styled.h4
+    {...props}
+    css={css({
+      marginTop: `0.2em`,
+      marginBottom: `0.2em`,
+    })}
+  />
+)
+
+const Position = props => (
+  <Styled.h3
+    {...props}
+    css={css({
+      marginTop: `0.2em`,
+      marginBottom: `0.2em`,
+      fontWeight: `600`,
+    })}
+  />
+)
+const Diploma = props => (
+  <Position
+    {...props}
+    css={css({
+      fontSize: `1.2em`,
+      fontWeight: `300`,
+      marginBottom: `1em`,
+    })}
+  />
+)
 
 export default function ResumePage(props) {
   return (
     <BlogLayout location={props.location} title="Aleksander Adamowski - Resume">
       <div>
-        <Styled.h1>My Resume</Styled.h1>
+        <Styled.h1 css={css({ fontSize: `3.5em` })}>My Resume</Styled.h1>
+
+        <Section>Experience</Section>
 
         <Company>
           <ExtLink href="https://www.facebook.com/" text="Facebook, Inc." />
@@ -143,6 +191,35 @@ export default function ResumePage(props) {
           Maintaining office computers, printers, small networking maintenance
         </p>
       </div>
+
+      <Section>Education</Section>
+
+      <School>
+        <ExtLink
+          href="https://www.pja.edu.pl"
+          text="Polish-Japanese Academy of Information Technology"
+        />
+      </School>
+
+      <Period>2008 - 2012 (4 years)</Period>
+      <Diploma>
+        Master of Computer Science, Systems and Network Programming
+      </Diploma>
+
+      <Period>1999 - 2008 (9 years)</Period>
+      <Diploma>
+        Graduate Engineer (Bachelor's), Systems and Network Programming
+      </Diploma>
+
+      <School>
+        <ExtLink
+          href="https://www.pw.edu.pl/engpw/Academics/Faculties/Faculty-of-Mechatronics"
+          text="Warsaw University of Technology"
+        />
+      </School>
+
+      <Period>1997 - 1999 (2 years)</Period>
+      <Diploma>Faculty of Mechatronics</Diploma>
     </BlogLayout>
   )
 }
