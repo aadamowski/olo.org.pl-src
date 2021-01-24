@@ -1,7 +1,7 @@
 import React from "react"
 import BlogLayout from "../components/layout"
-import ExtLink from "gatsby-theme-blog/src/components/extlink"
-import Para from "gatsby-theme-blog/src/components/para"
+import ExtLink from "../components/extlink"
+import Para from "../components/para"
 import { css, Styled } from "theme-ui"
 
 const MyLink = props => <ExtLink {...props} css={css({ margin: `2em` })} />

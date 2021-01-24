@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "gatsby-theme-blog/src/components/header"
-import Navlink from "gatsby-theme-blog/src/components/navlink"
+import Navlink from "src/components/navlink"
 import { css, Styled } from "theme-ui"
 
 export default props => (
