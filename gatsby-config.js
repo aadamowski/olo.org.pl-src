@@ -23,7 +23,7 @@ module.exports = {
   // For plain https://aadamowski.github.io/olo.org.pl/ :
   // pathPrefix: `/olo.org.pl`,
   siteMetadata: {
-    title: `Aleksander Adamowski`,
+    title: `Aleksander Adamowski - Blog`,
     description: `Aleksander Adamowski. Professional electronic brain surgeon.`,
     author: `Aleksander Adamowski`,
     siteUrl: `https://olo.org.pl`,

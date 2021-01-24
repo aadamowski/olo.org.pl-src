@@ -13,7 +13,6 @@ const WikiPage = ({
   ...props
 }) => (
   <Layout {...props} title={title}>
-    <h1>Note:</h1>
     <MDXRenderer tableOfContents={tableOfContents} {...props}>
       {body}
     </MDXRenderer>
