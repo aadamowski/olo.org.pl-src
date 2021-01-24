@@ -1,5 +1,5 @@
 import React from "react"
-import BlogLayout from "gatsby-theme-blog/src/components/layout"
+import BlogLayout from "../components/layout"
 import ExtLink from "gatsby-theme-blog/src/components/extlink"
 import YearsSince from "gatsby-theme-blog/src/components/yearssince"
 import { css, Styled } from "theme-ui"

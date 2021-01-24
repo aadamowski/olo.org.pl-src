@@ -1,5 +1,5 @@
 import React from "react"
-import BlogLayout from "gatsby-theme-blog/src/components/layout"
+import BlogLayout from "../components/layout"
 import { Styled } from "theme-ui"
 
 export default function Home(props) {
