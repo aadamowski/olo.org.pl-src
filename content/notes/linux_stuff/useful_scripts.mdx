@@ -28,11 +28,18 @@ alias mkdir_cd_curtimestamp='mkdir $(date +%F_%H_%M_%S); cd $_'
 
 ## Epoch timestamp to current date
 
-
 ```
 date -d "@$1"
 ```
 
+
+## sshping.sh
+
+```
+#!/bin/sh
+
+while true; do nc -zvw 1 "$1" 22; sleep 0.5; done;
+```
 
 
 ## Exposing shells on the network
