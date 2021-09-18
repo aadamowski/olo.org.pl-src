@@ -25,6 +25,11 @@ alias mkdir_cd_curtimestamp='mkdir $(date +%F_%H_%M_%S); cd $_'
 ```
 
 
+## No-fork cat in bash
+
+```
+clear IFS= read -rd '' contents < /proc/self/status; echo "$contents"
+```
 
 ## Epoch timestamp to current date
 
